@@ -9,6 +9,10 @@ public class Address
         this.street = street;
         this.postcode = postcode;
     }
+    
+    public Address() {
+        
+    }
 
     public String getStreet()
     {

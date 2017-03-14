@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-autowire="byType"
+	default-autowire-candidates="*Writer">
+
+
+	<bean id="logger" class="com.psideris.spring.autowiring.Logger"
+		autowire="byType">
+	</bean>
+
+	<bean id="fileWriter"
+		class="com.psideris.spring.autowiring.FileWriter">
+	</bean>
+	
+	<bean id="consoleWriter"
+		class="com.psideris.spring.autowiring.ConsoleWriter">
+	</bean>
+	
+	<bean id="kappa"
+		class="com.psideris.spring.autowiring.ConsoleWriter">
+	</bean>
+</beans>

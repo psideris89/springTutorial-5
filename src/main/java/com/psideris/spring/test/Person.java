@@ -16,6 +16,19 @@ public class Person
         this.name = name;
     }
     
+    public void onCreate() {
+        System.out.println("Person created: " + this);
+    }
+    
+    public void onDestroy() {
+        System.out.println("Person destroyed");
+    }
+    
+    public static Person getInstance(int id , String name) {
+        System.out.println("Creating Person using factory method.");
+        return new Person(id, name);
+    }
+    
     public int getId()
     {
         return id;
