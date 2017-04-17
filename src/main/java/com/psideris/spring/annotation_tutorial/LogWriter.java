@@ -1,4 +1,4 @@
-package com.psideris.spring.autowiringAnnotation;
+package com.psideris.spring.annotation_tutorial;
 
 public interface LogWriter
 {

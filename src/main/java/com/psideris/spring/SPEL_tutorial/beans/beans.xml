@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<context:component-scan
+		base-package="com.psideris.spring.SPEL_tutorial">
+	</context:component-scan>
+	
+	<bean id="robot" class="com.psideris.spring.SPEL_tutorial.Robot">
+		<property name="id" value="#{12345}"></property>
+		
+		<!-- name of the bean and the method I want to call -->
+		<property name="speech" value="#{randomText.getRandomText()}"></property>
+	
+	</bean>
+
+	<bean id="randomText" class="com.psideris.spring.SPEL_tutorial.RandomText">
+	</bean>
+	
+</beans>

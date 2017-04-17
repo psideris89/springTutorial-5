@@ -1,5 +1,8 @@
-package com.psideris.spring.autowiringAnnotation;
+package com.psideris.spring.annotation_tutorial;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ConsoleWriter implements LogWriter
 {
     public void write(String text)
